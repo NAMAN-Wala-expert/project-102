@@ -22,10 +22,10 @@ for file_name in list_of_files:
         path2 = to_dir
         path3 = to_dir+'/'+file_name
 
-    if  os.path.exists(path2):
+        if  os.path.exists(path2):
+                print("moving..."+file_name+"......")
+                shutil.move(path1,path3)
+        else:
+            shutil.move(path2)
             print("moving..."+file_name+"......")
             shutil.move(path1,path3)
-    else:
-        shutil.move(path2)
-        print("moving..."+file_name+"......")
-        shutil.move(path1,path3)
